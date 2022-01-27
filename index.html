@@ -3,12 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>CodingJS</title>
-  <link href="https://fonts.googleapis.com/css?family=Trirong" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/style.css" media="screen">
   <link rel="stylesheet" type="text/css" href="css/codemirror.css">
+  <link rel="stylesheet" type="text/css" href="css/codemirror-ayu-mirage.css">
+  <script src="dist/bundle.js" defer></script>
 </head>
 <body>
-  <div class="main">
+  <div class="container">
+    <div class="main">
     <p class="heading"><img src="img/favicon-96x96.png" width="32px" />&nbsp;<b>CodingJS</b></p>
     <p class="subheading">Solve programming problems in Javascript or TypeScript!<br/>
        <em>This site will only store your progress within your current web browser.<br>
@@ -16,8 +21,8 @@
     </p>
 
     <div id="topButtonContainer">
-      <button class="btn-top" id="saveAll">Save All Solutions</button>
-      <button class="btn-top" id="loadAll">Load Saved Solutions</button>
+      <button class="btn" id="saveAll">Save All Solutions</button>
+      <button class="btn" id="loadAll">Load Saved Solutions</button>
       <input type="file" id="fileInput" style="display:none;">
     </div>
 
@@ -29,8 +34,10 @@
 
   <footer>
     <em>Adapted by the-winter and contributors, based on Nick Parlante's <a class="links"href="http://codingbat.com/">CodingBat</a>.</em>
+    <br>
+    <em>Re-styled by perilstar.</em>
   </footer>
+  </div>
+  
 </body>
-  <script src="dist/bundle.js"></script>
-
 </html>

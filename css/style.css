@@ -1,3 +1,16 @@
+:root {
+  --theme-bg: #1F2430;
+  --theme-bg-darker: #171B24;
+  --theme-fg: #CCCAC2;
+  --theme-accent: #FFCC66;
+  --theme-error: #FF6666;
+  --theme-success: #D5FF80;
+  --theme-link: #73D0FF;
+  --theme-visited: #DFBFFF;
+  --theme-hover: #95E6CB;
+  --theme-active: #409FFF40;
+}
+
 html { 
   /* allows whole page to load before displaying content... 
   programatically switch this to visible via JS when page is ready */
@@ -18,7 +31,14 @@ body {
   padding-bottom: 2rem;
   min-height: 100%;
   font-size: 20px;
-  background-color: #f9f9f9;
+  background-color: var(--theme-bg-darker);
+  color: var(--theme-fg);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  padding: 30px 200px;
 }
 
 .main {
@@ -27,11 +47,12 @@ body {
 }
 
 .heading {
-  font-family: 'Trirong', serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
   font-size: 40px;
   margin-top: 0px;
   margin-bottom: 0px;
-  color: #6E5961;
+  color: var(--theme-fg);
   text-decoration: none;
 }
 
@@ -39,7 +60,8 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 4px dashed var(--theme-accent);
+  margin-bottom: 20px;
 }
 
 a.heading {
@@ -48,11 +70,15 @@ a.heading {
 
 a.links{
   text-decoration: none;
-  color: #9d858f;
+  color: var(--theme-link);
 }
 
 a.links:hover  {
-  color: black;
+  color: var(--theme-hover);
+}
+
+a.links:visited {
+  color: var(--theme-visited);
 }
 
 div.probField {
@@ -72,40 +98,46 @@ div.probField {
 
 .congrats {
   font-size: 30px;
-  color: #6E5961;
+  color: var(--theme-success);
   padding-left: 150px;
 }
 
 .errorMessage {
   font-size: 30px;
-  color: #ff0000;
+  color: var(--theme-error);
   padding-left: 150px;
 }
 
 .tick {
-  color: #769c49;
+  color: var(--theme-success);
 }
 
 .btn {
   font-size: 20px;
-  width: 100px;
-  height: 50px;
+  background-color:var(--theme-bg);
+	border-radius:28px;
+	border:1px solid var(--theme-accent);
+	display:inline-block;
+	cursor:pointer;
+	color:var(--theme-fg);
+	font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+	font-size:24px;
+	padding:8px 16px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+	text-decoration:none;
 }
+
+.btn:hover {
+	background-color: var(--theme-active);
+}       
 
 #topButtonContainer{
   position: absolute;
   float: right;
   top: 10px;
   right: 10px;
-}
-
-.btn-top {
-  font-size: 12px;
-  width: 175px;
-  height: 30px;
-  margin-top: 0;
-  padding-top: 0;
-  padding-left: 20px;
 }
 
 #show {
@@ -131,10 +163,9 @@ div.probField {
 #answer {
   width: 600px;
 	height: 300px;
-  border: 3px solid #CDC1C5;
+  border: 3px solid var(--theme-bg-darker);
   font-size: 18px;
-  color: white;
-  background-color: black;
+  color: var(--theme-fg);
 }
 
 #mySolution {
@@ -152,23 +183,31 @@ div#displayResults {
 }
 
 .test-table {
-  padding-left: 150px;
+  margin-left: 150px;
+  border-collapse: collapse;
   /* font-family: "Courier New", Courier, monospace; */
   /* font-size: 0.8em; */
 }
 
 .test-table td {
-  border: solid 1px black;
+  border: solid 2px var(--theme-fg);
   padding-left: 5px;
   padding-right: 5px;
+  margin: 0;
 }
 
 th {
-  border: solid 1px black;
+  border: solid 2px var(--theme-fg);
+  padding: 6px;
 }
 
 .status-box {
   width: 2em;
+}
+
+#problem {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
 }
 
 .problems {
@@ -183,6 +222,18 @@ th {
 
 .exercise-link {
   padding: 5px;
+}
+
+.exercise-link a {
+  color: var(--theme-link);
+}
+
+.exercise-link a:hover {
+  color: var(--theme-hover);
+}
+
+.exercise-link a:visited {
+  color: var(--theme-visited);
 }
 
 footer {

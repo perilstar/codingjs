@@ -5,11 +5,22 @@
   <meta charset="utf-8">
   <title>JS Reference</title>
   <style media="screen">
-
+  :root {
+    --theme-bg: #1F2430;
+    --theme-bg-darker: #171B24;
+    --theme-fg: #CCCAC2;
+    --theme-accent: #FFCC66;
+    --theme-error: #FF6666;
+    --theme-success: #D5FF80;
+    --theme-link: #73D0FF;
+    --theme-visited: #DFBFFF;
+    --theme-hover: #95E6CB;
+    --theme-active: #409FFF40;
+  }
 
   section {
     position: relative;
-    color: #FFF;
+    color: var(--theme-accent);
     padding: 20px;
     margin: 20px auto;
   }
@@ -24,7 +35,7 @@
       -moz-column-gap: 2em;
       column-gap: 2em;
       position: relative;
-      color: #FFF;
+      color: var(--theme-accent);
       padding: 20px;
       margin: 20px auto;
     }
@@ -39,34 +50,31 @@
     pre {
       padding: 1em;
       font-size: 0.8em;
-      background-color: #EEEEEE;
-      color: #000;
+      background-color: var(--theme-bg-darker);
+      color: var(--theme-fg);
     }
 
 
 
     table.minimalistBlack {
-      border: 3px solid #FFFFFF;
-      background-color: #EEEEEE;
+      border: 3px solid var(--theme-bg);
+      background-color: var(--theme-bg-darker);
       width: 100%;
       text-align: left;
       border-collapse: collapse;
     }
     table.minimalistBlack td, table.minimalistBlack th {
-      border: 1px solid #FFFFFF;
+      border: 1px solid var(--theme-bg);
       padding: 5px 4px;
-      color: #000;
+      color: var(--theme-fg);
     }
     table.minimalistBlack thead {
-      background: #CFCFCF;
-      background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
-      background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
-      background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
-      border-bottom: 3px solid #FFFFFF;
+      background: var(--theme-active);
+      border-bottom: 3px solid var(--theme-bg);
     }
     table.minimalistBlack thead th {
       font-weight: bold;
-      color: #000000;
+      color: var(--theme-fg);
       text-align: left;
     }
 

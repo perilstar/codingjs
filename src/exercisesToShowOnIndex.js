@@ -1,15 +1,14 @@
+const warmupExercises = require('./data/warmup.js');
+const stringExercises = require('./data/string.js');
+const recursionExercises = require('./data/recursion.js');
+const logicExercises = require('./data/logic.js');
+const arrayExcercies = require('./data/array.js');
+const apExcercises = require('./data/ap.js');
+const mapExercises = require('./data/map.js');
 
-let warmupExercises = require("./data/warmup.js");
-let stringExercises = require("./data/string.js");
-let recursionExercises = require("./data/recursion.js");
-let logicExercises =require("./data/logic.js");
-let arrayExcercies = require("./data/array.js");
-let apExcercises = require("./data/ap.js");
-let mapExercises = require("./data/map.js");
-
-let mainPageExercises = [...warmupExercises, ...stringExercises,
-                         ...logicExercises, ...arrayExcercies,
-                         ...recursionExercises, ...apExcercises,
-                        ...mapExercises];
+const mainPageExercises = [...warmupExercises, ...stringExercises,
+  ...logicExercises, ...arrayExcercies,
+  ...recursionExercises, ...apExcercises,
+  ...mapExercises];
 
 module.exports = mainPageExercises;
