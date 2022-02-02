@@ -6,7 +6,7 @@ function formatResults(funcName, inputStr, idealOutput, output) {
     return `<tr>
             <td>${funcName}${inputStr} → ${idealOutput}</td>
             <td>${output}</td>
-            <td style="text-align: center; color:${ok ? '#D5FF80' : '#FF6666'}">${ok ? '✔' : '✖'}</td>
+            <td class="center-text"><span class="answer ${ok ? "correct" : "incorrect"}">${ok ? '✔' : '✖'}</span></td>
         </tr>`;
 }
 
